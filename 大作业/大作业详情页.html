@@ -8,6 +8,8 @@
 				margin:0;
 				padding: 0;
 				list-style: none;
+				
+
 			}
 			.tou{
 				width:100%;
@@ -210,11 +212,12 @@
 				height: 632px;
 				margin:0 auto;
 			}
-			.neil{
+			#neil{
 				width: 995px;
 				height: 632px;
 				float: left;
 				background-color:#ffffff;
+				position: relative;
 			}
 			.neir{
 				width: 180px;
@@ -222,8 +225,8 @@
 
 
 				position: absolute;
-				left: 1169.5px;
-				top:214px;
+				left: 1000px;
+				/*top:214px;*/
 			}
 			/*.neill{
 				width: 408px;
@@ -590,7 +593,7 @@
 				width:408px;
 				height:408px;
 				position:absolute; 
-				left:577.6px;
+				left:430.5px;
 				z-index: 2;
 				float: left;
 				margin-top: 20px;
@@ -646,8 +649,8 @@
 				width: 410px;
 				height: 62px;
 				position: absolute;
-				left: 189.5px;
-				top: 688px;
+				left: 20px;
+				top: 450px;
 			}	
 			#right{
 				margin-left: 235px;
@@ -824,7 +827,7 @@
 		</div>
 		<div class="neirong">
 			<div class="zhong5">
-				<div class="neil">
+				<div id="neil">
 					<div id="box">
 					    <div id="img1">
 					         <img src="img/pp0.jpeg"/ id="pp0" style="display: block;">
@@ -838,7 +841,7 @@
 					        <img src="img/pp1.jpeg"  id="Bimg1"/ style="display: none;">
 					    </div>
 					</div>
-					<div style="width: 500px;height: 430px;left:620px;margin-top: 24px;float: left;display: block;position: absolute;z-index: 1;">
+					<div style="width: 500px;height: 430px;left:446px;margin-top: 24px;float: left;display: block;position: absolute;z-index: 1;">
 						<p class="n1">韩国 RE:CIPE 水晶清爽防水防晒喷雾SPF50 150ml/瓶</p>
 						<p class="n2">【限购3件】 超透明无痕防晒，防水防汗定妆，保湿降温不粘腻。水晶防晒喷雾，喷后皮</p>
 						<p class="n3">肤水润，不油，不留白，更不会像防晒霜那样抹不开，非常实用，开始存货吧。</p>
@@ -967,6 +970,7 @@
 					 	var Bimg1=document.getElementById("Bimg1");
 					 	var box=document.getElementById("box");
 					 	var box1=document.getElementById("box1");
+					 	var neil=document.getElementById("neil");
 					 	var pp0=document.getElementById("pp0");
 					 	var pp1=document.getElementById("pp1");
 					 	var Sp0=document.getElementById("Sp0");
@@ -982,8 +986,8 @@
 					 		box1.style.display="none";
 					 	}
 					 	img1.onmousemove=function(ev){
-						 	var oL=ev.clientX-box.offsetLeft-slider.offsetWidth/2;
-						 	var oT=ev.clientY-box.offsetTop-slider.offsetHeight/2;
+						 	var oL=ev.clientX-box.offsetLeft-neil.offsetLeft-slider.offsetWidth/2;
+						 	var oT=ev.clientY-box.offsetTop-neil.offsetTop-slider.offsetHeight/2;
 						 	var oMaxw=img1.offsetWidth-slider.offsetWidth;
 						 	var oMaxh=img1.offsetHeight-slider.offsetHeight;
 						 	oL=oL>oMaxw?oMaxw:oL<0?0:oL;
